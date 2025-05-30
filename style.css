@@ -1,0 +1,112 @@
+body {
+    background-image: url('imagens/Espar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffe81f;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.filme {
+    margin: 15px 0;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px #000;
+    cursor: pointer;
+}
+
+.info {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    max-width: 700px; /* Limita a largura para um máximo */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para a descrição */
+}
+
+.imagem-info {
+    width: 250px; /* Ajustado para uma imagem um pouco maior */
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px; /* Largura máxima para a descrição */
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo para legibilidade */
+    box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
+}
+
+/* Estilo para os GIFs */
+.gif-esquerda, .gif-direita {
+    position: fixed;
+    top: 100px;
+    width: 150px;
+    z-index: 10;
+}
+
+.gif-esquerda {
+    left: 10px;
+}
+
+.gif-direita {
+    right: 10px;
+}
+
+.gif-esquerda img,
+.gif-direita img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* GIF maior embaixo do esquerdo */
+.gif-maior-esquerda {
+    position: fixed;
+    top: 300px; /* Ajuste a posição vertical conforme necessário */
+    left: 10px;
+    width: 500px; /* Tamanho maior para o GIF */
+    z-index: 5;
+}
+
+.gif-maior-esquerda img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Novo GIF maior abaixo do direito */
+.gif-maior-direita {
+    position: fixed;
+    top: 300px; /* Ajuste a posição vertical conforme necessário */
+    right: 10px;
+    width: 500px; /* Novo tamanho maior para o GIF */
+    z-index: 5; /* Coloca atrás do GIF pequeno, se necessário */
+}
+
+.gif-maior-direita img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
