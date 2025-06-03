@@ -57,56 +57,29 @@ h1 {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo para legibilidade */
     box-sizing: border-box; /* Garante que o padding não ultrapasse a largura */
 }
-
-/* Estilo para os GIFs */
-.gif-esquerda, .gif-direita {
+#btn-voltar {
     position: fixed;
-    top: 100px;
-    width: 150px;
-    z-index: 10;
-}
-
-.gif-esquerda {
-    left: 10px;
-}
-
-.gif-direita {
-    right: 10px;
-}
-
-.gif-esquerda img,
-.gif-direita img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* GIF maior embaixo do esquerdo */
-.gif-maior-esquerda {
-    position: fixed;
-    top: 300px; /* Ajuste a posição vertical conforme necessário */
-    left: 10px;
-    width: 500px; /* Tamanho maior para o GIF */
-    z-index: 5;
-}
-
-.gif-maior-esquerda img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Novo GIF maior abaixo do direito */
-.gif-maior-direita {
-    position: fixed;
-    top: 300px; /* Ajuste a posição vertical conforme necessário */
-    right: 10px;
-    width: 500px; /* Novo tamanho maior para o GIF */
-    z-index: 5; /* Coloca atrás do GIF pequeno, se necessário */
-}
-
-.gif-maior-direita img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffe81f;
+    color: #000;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #000;
+    transition: background-color 0.3s ease, transform 0.2s;
+    z-index: 1100;
+  }
+  
+  #btn-voltar:hover {
+    background-color: #e6d000;
+    transform: translateX(-50%) scale(1.05);
+  }
+  .subtitulo {
+    margin-top: 40px; /* Ajusta a distância do topo */
+  }
+  

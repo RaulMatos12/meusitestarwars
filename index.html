@@ -6,6 +6,7 @@
     <title>Star Wars Ordem Cronológica</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<button id="btn-voltar" type="button">Voltar</button>
 <body>
     <p class="subtitulo">Raul, especialista da comunidade — minha opinião sobre:</p><p>Nota de 0-10</p>
     <h1>Star Wars - Ordem Cronológica</h1>
@@ -175,29 +176,38 @@
     </div>
 
     <script>
-         document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
             const filmes = [
                 'acolyte', 'ep1', 'ep2', 'clonewars', 'ep3', 'han', 'obiwankenobi', 'rebels', 'andor', 'rogueone',
                 'ep4', 'ep5', 'ep6', 'mandalorian', 'boba', 'ahsoka', 'skeleton', 'resistencia', 'ep7', 'ep8', 'ep9'
             ];
-
+    
             filmes.forEach(id => {
-                const botao = document.getElementById(id);
-                const info = document.getElementById(`${id}-info`);
-
-                botao?.addEventListener('click', () => {
-                    info.style.display = (info.style.display === 'none' || info.style.display === '') ? 'block' : 'none';
-                });
+                const filmeDiv = document.getElementById(id);
+                const infoDiv = document.getElementById(id + "-info");
+    
+                if (filmeDiv && infoDiv) {
+                    filmeDiv.addEventListener("click", () => {
+                        infoDiv.style.display = infoDiv.style.display === "none" ? "block" : "none";
+                    });
+                }
             });
-
-            // Clique em "1 Temporada" mostra texto extra
+    
+            // Extra: Mostrar o texto escondido em "The Acolyte"
             const temporadaAcolyte = document.getElementById("temporada-acolyte");
-            const acolyteExtra = document.getElementById("acolyte-extra");
-
-            temporadaAcolyte?.addEventListener("click", () => {
-                acolyteExtra.style.display = (acolyteExtra.style.display === "none" || acolyteExtra.style.display === "") ? "block" : "none";
-            });
+            const extraAcolyte = document.getElementById("acolyte-extra");
+    
+            if (temporadaAcolyte && extraAcolyte) {
+                temporadaAcolyte.addEventListener("click", () => {
+                    extraAcolyte.style.display = extraAcolyte.style.display === "none" ? "block" : "none";
+                });
+            }
         });
+  document.getElementById('btn-voltar').addEventListener('click', () => {
+    window.location.href = 'https://raulmatos12.github.io/meusite/';
+  });
+
     </script>
+    
 </body>
 </html>
